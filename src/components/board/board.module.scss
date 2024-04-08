@@ -1,0 +1,115 @@
+.container {
+  box-sizing: border-box;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .gameOver {
+    font-size: 4.8rem;
+    color: rgb(253, 59, 59);
+    margin: 6rem;
+  }
+  .playerTurn {
+    font-size: 2.4rem;
+    margin: 2.4rem 1.6rem 1.6rem;
+    color: rgb(115, 192, 251);
+    font-weight: 600;
+  }
+  .boardTiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 0.1rem solid #cdcdcd;
+    position: relative;
+    .tile {
+      width: 6rem;
+      height: 6rem;
+      border: 0.1rem solid #cdcdcd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .boardContainer {
+    position: relative;
+    .strikeRow1 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      width: 100%;
+      height: 0.2rem;
+      top: 3rem;
+    }
+    .strikeRow2 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      width: 100%;
+      height: 0.2rem;
+      top: 50%;
+    }
+    .strikeRow3 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      width: 100%;
+      height: 0.2rem;
+      top: 15rem;
+    }
+    .strikeCol1 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      height: 100%;
+      width: 0.2rem;
+      left: 3rem;
+    }
+    .strikeCol2 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      height: 100%;
+      width: 0.2rem;
+      left: 50%;
+    }
+    .strikeCol3 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      height: 100%;
+      width: 0.2rem;
+      left: 15rem;
+    }
+    .strikeDiag1 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      width: 90%;
+      height: 0.2rem;
+      top: 50%;
+      left: 5%;
+      transform:skewY(45deg)
+    }
+    .strikeDiag2 {
+      position: absolute;
+      background-color: rgb(248, 142, 36);
+      width: 90%;
+      height: 0.2rem;
+      top: 50%;
+      left: 5%;
+      transform:skewY(-45deg)
+    }
+  }
+  .win {
+    margin-top: 2.4rem;
+    font-size: 3.2rem;
+    color: rgb(90, 247, 90);
+    font-weight: 600;
+  }
+  .restart {
+    margin-top: 2.4rem;
+    padding: 1.2rem;
+    color: #fff;
+    background-color: rgb(115, 192, 251);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+  .restart:active{
+    padding: 1rem;
+  }
+}
